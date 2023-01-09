@@ -15,9 +15,11 @@ public class ModelParser {
     public DecisionTree getDecisionTreeFrom(JsonNode arrayNode) {
         assert arrayNode.isArray();
 
-        ArrayList<Node> trees = new ArrayList<>();
+        Node[] trees = new Node[arrayNode.size()];
+        int i = 0;
         for (JsonNode jsonNode : arrayNode) {
-            trees.add(getNodeFrom(jsonNode));
+            trees[i] = getNodeFrom(jsonNode);
+            i ++;
         }
         return new DecisionTree(trees);
     }
