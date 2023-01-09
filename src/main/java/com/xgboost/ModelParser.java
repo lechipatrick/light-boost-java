@@ -12,10 +12,10 @@ import com.fasterxml.jackson.databind.*;
 
 public class ModelParser {
 
-    public DecisionTree getDecisionTree(JsonNode arrayNode) {
+    public DecisionTree getDecisionTreeFrom(JsonNode arrayNode) {
         assert arrayNode.isArray();
 
-        ArrayList<DecisionTree.Node> trees = new ArrayList<>();
+        ArrayList<Node> trees = new ArrayList<>();
         for (JsonNode jsonNode : arrayNode) {
             trees.add(getNodeFrom(jsonNode));
         }
@@ -27,9 +27,9 @@ public class ModelParser {
         return value != null;
     }
 
-    public DecisionTree.Node getNodeFrom(JsonNode jsonNode) {
+    public Node getNodeFrom(JsonNode jsonNode) {
         if (isBranch(jsonNode)) {
-            return new DecisionTree.Branch(
+            return new Branch(
                     jsonNode.get("nodeid").intValue(),
                     jsonNode.get("depth").intValue(),
                     jsonNode.get("split").toString(),
@@ -42,7 +42,7 @@ public class ModelParser {
             );
         }
         else {
-            return new DecisionTree.Leaf(jsonNode.get("nodeid").intValue(), jsonNode.get("leaf").floatValue());
+            return new Leaf(jsonNode.get("nodeid").intValue(), jsonNode.get("leaf").floatValue());
         }
     }
 

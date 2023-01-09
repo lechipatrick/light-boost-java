@@ -13,17 +13,17 @@ public class ModelParserTest {
         ModelParser parser = new ModelParser();
         String modelPath = "models/sample_xgboost_model.json";
         JsonNode arrayNode = parser.unmarshal(modelPath);
-        DecisionTree myTree = parser.getDecisionTree(arrayNode);
+        DecisionTree myTree = parser.getDecisionTreeFrom(arrayNode);
 
         assertEquals(myTree.trees.size(), 9);
 
-        DecisionTree.Node firstTree = myTree.trees.get(0);
+        Node firstTree = myTree.trees.get(0);
         assertTrue(firstTree.isLeaf());
         assertEquals(firstTree.eval(null), -0.131447807, Math.ulp(0.1F));
 
-        DecisionTree.Node secondTree = myTree.trees.get(1);
+        Node secondTree = myTree.trees.get(1);
         assertFalse(secondTree.isLeaf());
-        DecisionTree.Branch myBranch = (DecisionTree.Branch) secondTree;
+        Branch myBranch = (Branch) secondTree;
         assertEquals(myBranch.threshold(), 8.74501896, Math.ulp(0.1F));
     }
 
