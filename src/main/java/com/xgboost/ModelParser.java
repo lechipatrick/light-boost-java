@@ -49,14 +49,12 @@ public class ModelParser {
     public JsonNode unmarshal(String modelFilePath) throws JsonProcessingException {
         String modelString = readModel(modelFilePath);
         ObjectMapper mapper = new ObjectMapper();
-        JsonNode jsonNode = mapper.readTree(modelString);
-        return jsonNode;
+        return mapper.readTree(modelString);
     }
 
     private String readModel(String model) {
         InputStream inputStream = getFileAsIOStream(model);
-        String modelString = getString(inputStream);
-        return modelString;
+        return getString(inputStream);
     }
 
     private InputStream getFileAsIOStream(String fileName) {
