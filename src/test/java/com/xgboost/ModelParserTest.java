@@ -1,6 +1,5 @@
 package com.xgboost;
 
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.core.*;
 import org.junit.jupiter.api.Test;
 
@@ -11,9 +10,7 @@ public class ModelParserTest {
     void parseModel() throws JsonProcessingException {
         ModelParser parser = new ModelParser();
         String modelPath = "models/sample_xgboost_model.json";
-        JsonNode arrayNode = parser.unmarshal(modelPath);
-        DecisionTree myTree = parser.getDecisionTreeFrom(arrayNode);
-
+        DecisionTree myTree = parser.getDecisionTreeFrom(modelPath);
         assertEquals(myTree.trees.length, 9);
 
         Node firstTree = myTree.trees[0];

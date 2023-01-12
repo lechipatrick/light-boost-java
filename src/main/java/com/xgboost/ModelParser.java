@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.core.*;
@@ -12,14 +11,19 @@ import com.fasterxml.jackson.databind.*;
 
 public class ModelParser {
 
-    public DecisionTree getDecisionTreeFrom(JsonNode arrayNode) {
+    public DecisionTree getDecisionTreeFrom(String modelPath) throws JsonProcessingException {
+        JsonNode arrayNode = unmarshal(modelPath);
+        return getDecisionTreeFrom(arrayNode);
+    }
+
+    private DecisionTree getDecisionTreeFrom(JsonNode arrayNode) {
         assert arrayNode.isArray();
 
         Node[] trees = new Node[arrayNode.size()];
         int i = 0;
         for (JsonNode jsonNode : arrayNode) {
             trees[i] = getNodeFrom(jsonNode);
-            i ++;
+            i++;
         }
         return new DecisionTree(trees);
     }
@@ -29,7 +33,7 @@ public class ModelParser {
         return value != null;
     }
 
-    public Node getNodeFrom(JsonNode jsonNode) {
+    private Node getNodeFrom(JsonNode jsonNode) {
         if (isBranch(jsonNode)) {
             return new Branch(
                     jsonNode.get("nodeid").intValue(),
@@ -42,13 +46,12 @@ public class ModelParser {
                     getNodeFrom(jsonNode.get("children").get(0)),
                     getNodeFrom(jsonNode.get("children").get(1))
             );
-        }
-        else {
+        } else {
             return new Leaf(jsonNode.get("nodeid").intValue(), jsonNode.get("leaf").floatValue());
         }
     }
 
-    public JsonNode unmarshal(String modelFilePath) throws JsonProcessingException {
+    private JsonNode unmarshal(String modelFilePath) throws JsonProcessingException {
         String modelString = readModel(modelFilePath);
         ObjectMapper mapper = new ObjectMapper();
         return mapper.readTree(modelString);
@@ -56,7 +59,11 @@ public class ModelParser {
 
     private String readModel(String model) {
         InputStream inputStream = getFileAsIOStream(model);
-        return getString(inputStream);
+        String text = new BufferedReader(
+                new InputStreamReader(inputStream, StandardCharsets.UTF_8))
+                .lines()
+                .collect(Collectors.joining("\n"));
+        return text;
     }
 
     private InputStream getFileAsIOStream(String fileName) {
@@ -70,11 +77,4 @@ public class ModelParser {
         return ioStream;
     }
 
-    private String getString(InputStream inputStream) {
-        String text = new BufferedReader(
-                new InputStreamReader(inputStream, StandardCharsets.UTF_8))
-                .lines()
-                .collect(Collectors.joining("\n"));
-        return text;
-    }
 }
