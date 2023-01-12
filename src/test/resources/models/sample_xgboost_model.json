@@ -1,7 +1,922 @@
 [
   {
-    "nodeid": 63,
-    "leaf": -0.131447807
+    "nodeid": 0,
+    "depth": 0,
+    "split": "position_4",
+    "split_condition": 1,
+    "yes": 1,
+    "no": 2,
+    "missing": 1,
+    "children": [
+      {
+        "nodeid": 1,
+        "depth": 1,
+        "split": "brand_match",
+        "split_condition": 0.5,
+        "yes": 3,
+        "no": 4,
+        "missing": 3,
+        "children": [
+          {
+            "nodeid": 3,
+            "depth": 2,
+            "split": "synonymn",
+            "split_condition": 8.41708374,
+            "yes": 7,
+            "no": 8,
+            "missing": 7,
+            "children": [
+              {
+                "nodeid": 7,
+                "depth": 3,
+                "split": "jaccard_score_title",
+                "split_condition": 0.298936188,
+                "yes": 15,
+                "no": 16,
+                "missing": 15,
+                "children": [
+                  {
+                    "nodeid": 15,
+                    "depth": 4,
+                    "split": "jaccard_score_category",
+                    "split_condition": 0.103006192,
+                    "yes": 31,
+                    "no": 32,
+                    "missing": 31,
+                    "children": [
+                      {
+                        "nodeid": 31,
+                        "depth": 5,
+                        "split": "position_38",
+                        "split_condition": 1,
+                        "yes": 63,
+                        "no": 64,
+                        "missing": 63,
+                        "children": [
+                          {
+                            "nodeid": 63,
+                            "leaf": -0.131447807
+                          },
+                          {
+                            "nodeid": 64,
+                            "leaf": 0.107805386
+                          }
+                        ]
+                      },
+                      {
+                        "nodeid": 32,
+                        "depth": 5,
+                        "split": "synonymn",
+                        "split_condition": 6.36919117,
+                        "yes": 65,
+                        "no": 66,
+                        "missing": 66,
+                        "children": [
+                          {
+                            "nodeid": 65,
+                            "leaf": -0.127122834
+                          },
+                          {
+                            "nodeid": 66,
+                            "leaf": -0.112320244
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeid": 16,
+                    "depth": 4,
+                    "split": "product_days_in_catalog",
+                    "split_condition": 715.5,
+                    "yes": 33,
+                    "no": 34,
+                    "missing": 33,
+                    "children": [
+                      {
+                        "nodeid": 33,
+                        "depth": 5,
+                        "split": "synonymn",
+                        "split_condition": 16.7620087,
+                        "yes": 67,
+                        "no": 68,
+                        "missing": 68,
+                        "children": [
+                          {
+                            "nodeid": 67,
+                            "leaf": -0.131447807
+                          },
+                          {
+                            "nodeid": 68,
+                            "leaf": -0.102355033
+                          }
+                        ]
+                      },
+                      {
+                        "nodeid": 34,
+                        "depth": 5,
+                        "split": "synonymn",
+                        "split_condition": 4.62730789,
+                        "yes": 69,
+                        "no": 70,
+                        "missing": 70,
+                        "children": [
+                          {
+                            "nodeid": 69,
+                            "leaf": -0.0477528758
+                          },
+                          {
+                            "nodeid": 70,
+                            "leaf": -0.0929056481
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeid": 8,
+                "depth": 3,
+                "split": "jaccard_score_title",
+                "split_condition": 0.274083078,
+                "yes": 17,
+                "no": 18,
+                "missing": 17,
+                "children": [
+                  {
+                    "nodeid": 17,
+                    "depth": 4,
+                    "split": "product_days_in_catalog",
+                    "split_condition": 490.5,
+                    "yes": 35,
+                    "no": 36,
+                    "missing": 35,
+                    "children": [
+                      {
+                        "nodeid": 35,
+                        "depth": 5,
+                        "split": "synonymn",
+                        "split_condition": 10.1010065,
+                        "yes": 71,
+                        "no": 72,
+                        "missing": 72,
+                        "children": [
+                          {
+                            "nodeid": 71,
+                            "leaf": -0.103206538
+                          },
+                          {
+                            "nodeid": 72,
+                            "leaf": -0.131447807
+                          }
+                        ]
+                      },
+                      {
+                        "nodeid": 36,
+                        "depth": 5,
+                        "split": "synonymn",
+                        "split_condition": 21.193222,
+                        "yes": 73,
+                        "no": 74,
+                        "missing": 74,
+                        "children": [
+                          {
+                            "nodeid": 73,
+                            "leaf": -0.109819539
+                          },
+                          {
+                            "nodeid": 74,
+                            "leaf": -0.126586884
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeid": 18,
+                    "depth": 4,
+                    "split": "jaccard_score_category",
+                    "split_condition": 0.0533428192,
+                    "yes": 37,
+                    "no": 38,
+                    "missing": 37,
+                    "children": [
+                      {
+                        "nodeid": 37,
+                        "depth": 5,
+                        "split": "synonymn",
+                        "split_condition": 16.8212395,
+                        "yes": 75,
+                        "no": 76,
+                        "missing": 76,
+                        "children": [
+                          {
+                            "nodeid": 75,
+                            "leaf": -0.0957533717
+                          },
+                          {
+                            "nodeid": 76,
+                            "leaf": -0.0505784191
+                          }
+                        ]
+                      },
+                      {
+                        "nodeid": 38,
+                        "depth": 5,
+                        "split": "jaccard_score_category",
+                        "split_condition": 0.202941179,
+                        "yes": 77,
+                        "no": 78,
+                        "missing": 77,
+                        "children": [
+                          {
+                            "nodeid": 77,
+                            "leaf": -0.0345591865
+                          },
+                          {
+                            "nodeid": 78,
+                            "leaf": -0.0832752064
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodeid": 4,
+            "depth": 2,
+            "split": "synonymn",
+            "split_condition": 9.14575386,
+            "yes": 9,
+            "no": 10,
+            "missing": 9,
+            "children": [
+              {
+                "nodeid": 9,
+                "depth": 3,
+                "split": "jaccard_score_title",
+                "split_condition": 0.340667307,
+                "yes": 19,
+                "no": 20,
+                "missing": 19,
+                "children": [
+                  {
+                    "nodeid": 19,
+                    "depth": 4,
+                    "split": "product_days_in_catalog",
+                    "split_condition": 1015.5,
+                    "yes": 39,
+                    "no": 40,
+                    "missing": 39,
+                    "children": [
+                      {
+                        "nodeid": 39,
+                        "depth": 5,
+                        "split": "synonymn",
+                        "split_condition": 9.05377579,
+                        "yes": 79,
+                        "no": 80,
+                        "missing": 80,
+                        "children": [
+                          {
+                            "nodeid": 79,
+                            "leaf": -0.0943739265
+                          },
+                          {
+                            "nodeid": 80,
+                            "leaf": -0.0173994619
+                          }
+                        ]
+                      },
+                      {
+                        "nodeid": 40,
+                        "depth": 5,
+                        "split": "synonymn",
+                        "split_condition": 8.84478092,
+                        "yes": 81,
+                        "no": 82,
+                        "missing": 81,
+                        "children": [
+                          {
+                            "nodeid": 81,
+                            "leaf": -0.0242957473
+                          },
+                          {
+                            "nodeid": 82,
+                            "leaf": -0.130074292
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeid": 20,
+                    "depth": 4,
+                    "split": "jaccard_score_category",
+                    "split_condition": 0.260869563,
+                    "yes": 41,
+                    "no": 42,
+                    "missing": 41,
+                    "children": [
+                      {
+                        "nodeid": 41,
+                        "depth": 5,
+                        "split": "synonymn",
+                        "split_condition": 7.67408991,
+                        "yes": 83,
+                        "no": 84,
+                        "missing": 84,
+                        "children": [
+                          {
+                            "nodeid": 83,
+                            "leaf": 0.0229798425
+                          },
+                          {
+                            "nodeid": 84,
+                            "leaf": 0.0906794593
+                          }
+                        ]
+                      },
+                      {
+                        "nodeid": 42,
+                        "depth": 5,
+                        "split": "synonymn",
+                        "split_condition": 4.42914677,
+                        "yes": 85,
+                        "no": 86,
+                        "missing": 86,
+                        "children": [
+                          {
+                            "nodeid": 85,
+                            "leaf": 0.0459115542
+                          },
+                          {
+                            "nodeid": 86,
+                            "leaf": -0.131447807
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeid": 10,
+                "depth": 3,
+                "split": "product_days_in_catalog",
+                "split_condition": 937,
+                "yes": 21,
+                "no": 22,
+                "missing": 21,
+                "children": [
+                  {
+                    "nodeid": 21,
+                    "depth": 4,
+                    "split": "product_days_in_catalog",
+                    "split_condition": 896.5,
+                    "yes": 43,
+                    "no": 44,
+                    "missing": 43,
+                    "children": [
+                      {
+                        "nodeid": 43,
+                        "depth": 5,
+                        "split": "synonymn",
+                        "split_condition": 12.4907017,
+                        "yes": 87,
+                        "no": 88,
+                        "missing": 88,
+                        "children": [
+                          {
+                            "nodeid": 87,
+                            "leaf": -0.00929680374
+                          },
+                          {
+                            "nodeid": 88,
+                            "leaf": -0.0470352322
+                          }
+                        ]
+                      },
+                      {
+                        "nodeid": 44,
+                        "depth": 5,
+                        "split": "synonymn",
+                        "split_condition": 23.0249767,
+                        "yes": 89,
+                        "no": 90,
+                        "missing": 90,
+                        "children": [
+                          {
+                            "nodeid": 89,
+                            "leaf": -0.116808712
+                          },
+                          {
+                            "nodeid": 90,
+                            "leaf": 0.0260116979
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeid": 22,
+                    "depth": 4,
+                    "split": "jaccard_score_category",
+                    "split_condition": 0.0274436101,
+                    "yes": 45,
+                    "no": 46,
+                    "missing": 45,
+                    "children": [
+                      {
+                        "nodeid": 45,
+                        "depth": 5,
+                        "split": "synonymn",
+                        "split_condition": 11.4743652,
+                        "yes": 91,
+                        "no": 92,
+                        "missing": 92,
+                        "children": [
+                          {
+                            "nodeid": 91,
+                            "leaf": -0.00171526941
+                          },
+                          {
+                            "nodeid": 92,
+                            "leaf": 0.0186658967
+                          }
+                        ]
+                      },
+                      {
+                        "nodeid": 46,
+                        "depth": 5,
+                        "split": "jaccard_score_category",
+                        "split_condition": 0.0307765156,
+                        "yes": 93,
+                        "no": 94,
+                        "missing": 93,
+                        "children": [
+                          {
+                            "nodeid": 93,
+                            "leaf": -0.131447807
+                          },
+                          {
+                            "nodeid": 94,
+                            "leaf": -0.00775654288
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nodeid": 2,
+        "depth": 1,
+        "split": "jaccard_score_title",
+        "split_condition": 0.182861269,
+        "yes": 5,
+        "no": 6,
+        "missing": 5,
+        "children": [
+          {
+            "nodeid": 5,
+            "depth": 2,
+            "split": "brand_match",
+            "split_condition": 0.5,
+            "yes": 11,
+            "no": 12,
+            "missing": 11,
+            "children": [
+              {
+                "nodeid": 11,
+                "depth": 3,
+                "split": "synonymn",
+                "split_condition": 5.81940174,
+                "yes": 23,
+                "no": 24,
+                "missing": 24,
+                "children": [
+                  {
+                    "nodeid": 23,
+                    "depth": 4,
+                    "split": "jaccard_score_category",
+                    "split_condition": 0.0794736817,
+                    "yes": 47,
+                    "no": 48,
+                    "missing": 47,
+                    "children": [
+                      {
+                        "nodeid": 47,
+                        "depth": 5,
+                        "split": "synonymn",
+                        "split_condition": 4.32705307,
+                        "yes": 95,
+                        "no": 96,
+                        "missing": 96,
+                        "children": [
+                          {
+                            "nodeid": 95,
+                            "leaf": -0.131447807
+                          },
+                          {
+                            "nodeid": 96,
+                            "leaf": -0.110216469
+                          }
+                        ]
+                      },
+                      {
+                        "nodeid": 48,
+                        "depth": 5,
+                        "split": "jaccard_score_category",
+                        "split_condition": 0.10172414,
+                        "yes": 97,
+                        "no": 98,
+                        "missing": 97,
+                        "children": [
+                          {
+                            "nodeid": 97,
+                            "leaf": -0.0197692309
+                          },
+                          {
+                            "nodeid": 98,
+                            "leaf": -0.0848635435
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeid": 24,
+                    "depth": 4,
+                    "split": "jaccard_score_category",
+                    "split_condition": 0.0655913949,
+                    "yes": 49,
+                    "no": 50,
+                    "missing": 49,
+                    "children": [
+                      {
+                        "nodeid": 49,
+                        "depth": 5,
+                        "split": "synonymn",
+                        "split_condition": 8.53250599,
+                        "yes": 99,
+                        "no": 100,
+                        "missing": 99,
+                        "children": [
+                          {
+                            "nodeid": 99,
+                            "leaf": -0.098853223
+                          },
+                          {
+                            "nodeid": 100,
+                            "leaf": -0.0605627373
+                          }
+                        ]
+                      },
+                      {
+                        "nodeid": 50,
+                        "depth": 5,
+                        "split": "synonymn",
+                        "split_condition": 11.9526796,
+                        "yes": 101,
+                        "no": 102,
+                        "missing": 102,
+                        "children": [
+                          {
+                            "nodeid": 101,
+                            "leaf": -0.0168543421
+                          },
+                          {
+                            "nodeid": 102,
+                            "leaf": -0.081339635
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeid": 12,
+                "depth": 3,
+                "split": "product_days_in_catalog",
+                "split_condition": 417.5,
+                "yes": 25,
+                "no": 26,
+                "missing": 25,
+                "children": [
+                  {
+                    "nodeid": 25,
+                    "depth": 4,
+                    "split": "jaccard_score_category",
+                    "split_condition": 0.190909088,
+                    "yes": 51,
+                    "no": 52,
+                    "missing": 51,
+                    "children": [
+                      {
+                        "nodeid": 51,
+                        "depth": 5,
+                        "split": "synonymn",
+                        "split_condition": 8.28974724,
+                        "yes": 103,
+                        "no": 104,
+                        "missing": 103,
+                        "children": [
+                          {
+                            "nodeid": 103,
+                            "leaf": -0.0134061426
+                          },
+                          {
+                            "nodeid": 104,
+                            "leaf": -0.103475705
+                          }
+                        ]
+                      },
+                      {
+                        "nodeid": 52,
+                        "leaf": 0.128834024
+                      }
+                    ]
+                  },
+                  {
+                    "nodeid": 26,
+                    "depth": 4,
+                    "split": "jaccard_score_category",
+                    "split_condition": 0.503508806,
+                    "yes": 53,
+                    "no": 54,
+                    "missing": 53,
+                    "children": [
+                      {
+                        "nodeid": 53,
+                        "depth": 5,
+                        "split": "synonymn",
+                        "split_condition": 5.98765755,
+                        "yes": 105,
+                        "no": 106,
+                        "missing": 106,
+                        "children": [
+                          {
+                            "nodeid": 105,
+                            "leaf": 0.0924718454
+                          },
+                          {
+                            "nodeid": 106,
+                            "leaf": 0.0510628708
+                          }
+                        ]
+                      },
+                      {
+                        "nodeid": 54,
+                        "leaf": 0.131447807
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodeid": 6,
+            "depth": 2,
+            "split": "synonymn",
+            "split_condition": 11.5100594,
+            "yes": 13,
+            "no": 14,
+            "missing": 13,
+            "children": [
+              {
+                "nodeid": 13,
+                "depth": 3,
+                "split": "jaccard_score_title",
+                "split_condition": 0.376689196,
+                "yes": 27,
+                "no": 28,
+                "missing": 27,
+                "children": [
+                  {
+                    "nodeid": 27,
+                    "depth": 4,
+                    "split": "brand_match",
+                    "split_condition": 0.5,
+                    "yes": 55,
+                    "no": 56,
+                    "missing": 55,
+                    "children": [
+                      {
+                        "nodeid": 55,
+                        "depth": 5,
+                        "split": "jaccard_score_category",
+                        "split_condition": 0.0701970458,
+                        "yes": 107,
+                        "no": 108,
+                        "missing": 107,
+                        "children": [
+                          {
+                            "nodeid": 107,
+                            "leaf": -0.0551145114
+                          },
+                          {
+                            "nodeid": 108,
+                            "leaf": -0.000846072799
+                          }
+                        ]
+                      },
+                      {
+                        "nodeid": 56,
+                        "depth": 5,
+                        "split": "synonymn",
+                        "split_condition": 9.66336441,
+                        "yes": 109,
+                        "no": 110,
+                        "missing": 109,
+                        "children": [
+                          {
+                            "nodeid": 109,
+                            "leaf": 0.0919985324
+                          },
+                          {
+                            "nodeid": 110,
+                            "leaf": 0.0441380888
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeid": 28,
+                    "depth": 4,
+                    "split": "product_days_in_catalog",
+                    "split_condition": 1588.5,
+                    "yes": 57,
+                    "no": 58,
+                    "missing": 57,
+                    "children": [
+                      {
+                        "nodeid": 57,
+                        "depth": 5,
+                        "split": "brand_match",
+                        "split_condition": 0.5,
+                        "yes": 111,
+                        "no": 112,
+                        "missing": 111,
+                        "children": [
+                          {
+                            "nodeid": 111,
+                            "leaf": -0.0783214197
+                          },
+                          {
+                            "nodeid": 112,
+                            "leaf": 0.120567352
+                          }
+                        ]
+                      },
+                      {
+                        "nodeid": 58,
+                        "depth": 5,
+                        "split": "brand_match",
+                        "split_condition": 0.5,
+                        "yes": 113,
+                        "no": 114,
+                        "missing": 113,
+                        "children": [
+                          {
+                            "nodeid": 113,
+                            "leaf": 0.0628168881
+                          },
+                          {
+                            "nodeid": 114,
+                            "leaf": 0.131447807
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeid": 14,
+                "depth": 3,
+                "split": "product_days_in_catalog",
+                "split_condition": 1267.5,
+                "yes": 29,
+                "no": 30,
+                "missing": 29,
+                "children": [
+                  {
+                    "nodeid": 29,
+                    "depth": 4,
+                    "split": "jaccard_score_category",
+                    "split_condition": 0.24068965,
+                    "yes": 59,
+                    "no": 60,
+                    "missing": 59,
+                    "children": [
+                      {
+                        "nodeid": 59,
+                        "depth": 5,
+                        "split": "synonymn",
+                        "split_condition": 14.4364204,
+                        "yes": 115,
+                        "no": 116,
+                        "missing": 116,
+                        "children": [
+                          {
+                            "nodeid": 115,
+                            "leaf": -0.0171935037
+                          },
+                          {
+                            "nodeid": 116,
+                            "leaf": 0.046034988
+                          }
+                        ]
+                      },
+                      {
+                        "nodeid": 60,
+                        "depth": 5,
+                        "split": "brand_match",
+                        "split_condition": 0.5,
+                        "yes": 117,
+                        "no": 118,
+                        "missing": 117,
+                        "children": [
+                          {
+                            "nodeid": 117,
+                            "leaf": -0.0671354234
+                          },
+                          {
+                            "nodeid": 118,
+                            "leaf": 0.0853097513
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeid": 30,
+                    "depth": 4,
+                    "split": "brand_match",
+                    "split_condition": 0.5,
+                    "yes": 61,
+                    "no": 62,
+                    "missing": 61,
+                    "children": [
+                      {
+                        "nodeid": 61,
+                        "depth": 5,
+                        "split": "jaccard_score_category",
+                        "split_condition": 0.227922082,
+                        "yes": 119,
+                        "no": 120,
+                        "missing": 119,
+                        "children": [
+                          {
+                            "nodeid": 119,
+                            "leaf": 0.0612666421
+                          },
+                          {
+                            "nodeid": 120,
+                            "leaf": 0.0192847513
+                          }
+                        ]
+                      },
+                      {
+                        "nodeid": 62,
+                        "depth": 5,
+                        "split": "synonymn",
+                        "split_condition": 35.9420853,
+                        "yes": 121,
+                        "no": 122,
+                        "missing": 122,
+                        "children": [
+                          {
+                            "nodeid": 121,
+                            "leaf": 0.114909425
+                          },
+                          {
+                            "nodeid": 122,
+                            "leaf": 0.000598936633
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "nodeid": 0,

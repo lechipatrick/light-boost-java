@@ -6,7 +6,7 @@ public record Leaf(int nodeId, float leafValue) implements Node {
         return true;
     }
 
-    public float eval(float[] featureValues) {
+    public float eval(Feature feature) {
         return leafValue;
     }
 
