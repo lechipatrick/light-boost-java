@@ -10,25 +10,26 @@ public record Branch(int nodeId, int depth, String featureName, float threshold,
 
     public float eval(Feature feature) {
         Node node = this;
-        if (isLeaf()) {
-            assert node instanceof Leaf;
-            Leaf leaf = (Leaf) node;
-            return leaf.eval(feature);
-        } else {
+        if (!this.isLeaf()) {
             assert node instanceof Branch;
-            Branch branch = (Branch) node;
+            Branch branch = (Branch) this;
             if (feature.getFeature(featureName) <= threshold) {
                 return branch.left.eval(feature);
             } else if (feature.getFeature(featureName) > threshold) {
                 return branch.right.eval(feature);
             } else {
-                // reaching here implies that feature value must now be Float.NaN
+                // reaching here implies that feature value is Float.NaN
                 if (missingNodeId == leftNodeId) {
                     return branch.left.eval(feature);
                 } else {
                     return branch.right.eval(feature);
                 }
             }
+        }
+        else {
+            assert node instanceof Leaf;
+            Leaf leaf = (Leaf) node;
+            return leaf.eval(feature);
         }
     }
 }
