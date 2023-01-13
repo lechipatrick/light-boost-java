@@ -13,15 +13,14 @@ public class Feature {
 
     public void setFromJson(JsonNode jsonNode) {
         Iterator<String> iterator = jsonNode.fieldNames();
-        iterator.forEachRemaining(e -> setFeature(e, jsonNode.get(e)));
+        iterator.forEachRemaining(e -> setFeature(e, getFloat(jsonNode.get(e))));
     }
 
-    public void setFeature(String featureName, JsonNode jsonNode) {
+    private float getFloat(JsonNode jsonNode) {
         if (jsonNode.isNull()) {
-            setFeature(featureName, Float.NaN);
-        } else {
-            setFeature(featureName, jsonNode.floatValue());
+            return Float.NaN;
         }
+        return jsonNode.floatValue();
     }
 
     public void setFeature(String featureName, Float featureValue) {
