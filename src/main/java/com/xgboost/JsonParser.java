@@ -4,31 +4,20 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
+import java.io.*;
 import java.util.stream.Collectors;
 
 public class JsonParser {
-    public JsonNode unmarshal(String modelFilePath) throws JsonProcessingException {
-        InputStream inputStream = getFileAsIOStream(modelFilePath);
-        String modelString = new BufferedReader(
-                new InputStreamReader(inputStream, StandardCharsets.UTF_8))
-                .lines()
-                .collect(Collectors.joining("\n"));
+    public JsonNode unmarshal(File file) throws JsonProcessingException, FileNotFoundException {
+        String text = getString(file);
         ObjectMapper mapper = new ObjectMapper();
-        return mapper.readTree(modelString);
+        return mapper.readTree(text);
     }
 
-    private InputStream getFileAsIOStream(String fileName) {
-        InputStream ioStream = this.getClass()
-                .getClassLoader()
-                .getResourceAsStream(fileName);
-
-        if (ioStream == null) {
-            throw new IllegalArgumentException(fileName + " is not found");
-        }
-        return ioStream;
+    public String getString(File file) throws FileNotFoundException {
+        FileReader fileReader = new FileReader(file);
+        BufferedReader bufferedReader = new BufferedReader(fileReader);
+        String text = bufferedReader.lines().collect(Collectors.joining("\n"));
+        return text;
     }
 }

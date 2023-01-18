@@ -4,12 +4,20 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Paths;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class FeatureTest {
     @Test
-    void testFeature() throws JsonProcessingException {
-        JsonNode jsonNode = new JsonParser().unmarshal("models/feature.json");
+    void testFeature() throws JsonProcessingException, URISyntaxException, FileNotFoundException {
+        URL resource = this.getClass().getClassLoader().getResource("models/feature.json");
+        File featureFile = Paths.get(resource.toURI()).toFile();
+        JsonNode jsonNode = new JsonParser().unmarshal(featureFile);
         assert (!jsonNode.isArray());
         Feature feature = new Feature();
         feature.setFromJson(jsonNode);
@@ -23,6 +31,4 @@ public class FeatureTest {
             feature.getFeature("non-existing-feature");
         });
     }
-
-
 }

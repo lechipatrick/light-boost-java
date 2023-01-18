@@ -2,11 +2,13 @@ package com.xgboost;
 
 import com.fasterxml.jackson.core.*;
 import com.fasterxml.jackson.databind.*;
+import java.io.File;
+import java.io.FileNotFoundException;
 
 public class ModelParser extends JsonParser {
 
-    public DecisionTree getDecisionTreeFrom(String modelPath) throws JsonProcessingException {
-        JsonNode arrayNode = unmarshal(modelPath);
+    public DecisionTree getDecisionTreeFrom(File modelFile) throws JsonProcessingException, FileNotFoundException {
+        JsonNode arrayNode = unmarshal(modelFile);
         return getDecisionTreeFrom(arrayNode);
     }
 
