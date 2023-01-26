@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import java.util.*;
 
 public class Feature {
-    private HashMap<String, Float> features;
+    private final HashMap<String, Float> features;
 
     public Feature() {
         features = new HashMap<>();

@@ -15,15 +15,16 @@ public class ModelParserTest {
     @Test
     void testParser() throws JsonProcessingException, URISyntaxException, FileNotFoundException {
         ModelParser parser = new ModelParser();
-        URL resourceModel = this.getClass().getClassLoader().getResource("models/sample_xgboost_model.json");
+        URL resourceModel = this.getClass().getClassLoader().getResource("models/sample_model.json");
+        assert resourceModel != null;
         File modelFile = Paths.get(resourceModel.toURI()).toFile();
         DecisionTree myTree = parser.getDecisionTreeFrom(modelFile);
-        assertEquals(myTree.trees.length, 9);
+        assertEquals(myTree.trees.length, 2);
 
         Node secondTree = myTree.trees[1];
         assertFalse(secondTree.isLeaf());
         Branch myBranch = (Branch) secondTree;
-        assertEquals(myBranch.threshold(), 8.74501896, Math.ulp(0.1F));
+        assertEquals(myBranch.threshold(), 1, Math.ulp(0.1F));
     }
 
 }
